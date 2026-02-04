@@ -1,0 +1,199 @@
+Script started on Wed 28 Jan 2026 4:55:48 AM EST
+]0;tananya1@gsuad.gsu.edu@snowball:~[?1034h[tananya1@gsuad.gsu.edu@snowball ~]$ ls
+ananya_taaruni_lab02  [0m[38;5;27mcsc3320[0m  Syllabus.txt
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ cd csc3320
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ pwd
+/home/tananya1/csc3320
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ cp ../Syllabus.txt .
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ cat Syllabus.txt
+CSC 3320 Ð System-Level Programming
+Spring 2026
+Course Information & Syllabus
+Instructor: Dr. Hossein S Esfahani
+Office Location: 1 Park Place, 7th floor, Room 721
+E-mail: ssaghaeiannejadesfa1@gsu.edu
+Office Hours: TR 01:00 pm Ð 03:00 pm, or by appointment
+Virtual Webex Meetings by appointment
+https://calendly.com/ssaghaeiannejadesfa1-gsu/office-hours
+Lecture: MW 2:00 pm Ð 03:15 pm (All Sections)
+Lab Sessions: R 12:45 pm Ð 01:35 pm (Section 010)
+R 09:30 am Ð 10:20 am (Section 012)
+R 02:15 pm Ð 03:05 pm (Section 014)
+R 11:00 am Ð 11:50 am (Section 016)
+Lab TA: Paavani Aashika Maddi (pmaddi2@student.gsu.edu)
+Grader TAs: Fiyinfoluwa Dideoluwa (fdideoluwa1@gsu.edu)
+Bryan Chau (nchau1@student.gsu.edu)
+Course Description
+This course is designed to give students experience in using a high-level language (C) to interface with an
+operating system (UNIX). Students will learn fundamental UNIX concepts, including files, processes,
+inter-process communication, and shells. They will also gain experience writing and testing C programs
+using UNIX editors and programming tools.
+Course Outcomes
+1. Proficient in using Remote Systems through SSH and SFTP.
+2. Proficient in using UNIX/Linux Systems and Shell commands.
+3. Write C programs to solve problems.
+4. Demonstrate knowledge of process mechanisms such as pipe, fork, exec, etc...
+5. Apply structs to access directory contents and/or process data.
+Recommended Textbooks: (Purchase Not Required)
+1. King, C Programming: A Modern Approach, Norton, 2nd edition, 2008
+ISBN-13: 978-0393979503.
+2. Glass and Ables, Unix for Programmers and Users, Prentice Hall, Third Edition (2003)
+ISBN 0-13-046553-4.
+Grade Distribution
+Item % of Final Grade
+Homework & Quizzes 30%
+Lab Assignments 25%
+Midterm Exam 20%
+Final Exam 25%
+Tentative Course Schedule
+Week of: Topics: Readings
+Jan 12th Course Introduction, UNIX, and SSH Unix: Chapter 1
+Jan 19th UNIX (cont.), Compiling a C program Unix: Chapter 2
+Jan 26th Introduction to C C: Chapter 1
+Feb 2nd C Fundamentals C: Chapter 2
+Feb 9th C Fundamentals (cont.) C: Chapter 2
+Feb 16th I/O, Expressions, Selection Statements, and Loops C: Chapters 3-6
+Feb 23rd Arrays and Functions C: Chapters 8, 9
+Mar 2nd Mid-Term Exam, Pointers C: Chapter 11
+Mar 9th Pointers (cont.) C: Chapter 11
+Mar 16th Spring Break N/A
+Mar 23rd Pointers and Arrays C: Chapter 12
+Mar 30st Strings C: Chapter 13
+Apr 6th Structures and Unions, Advanced Pointers C: Chapter 16, 17
+Apr 13th UNIX Utilities, UNIX Shell Unix: Chapter 3, 4
+Apr 22nd C Programming Tools, UNIX Internals Unix: Chapter 12, 14
+Apr 27th Finals Week, Final Exam N/A
+Note: Topic dates are subject to change.
+Important Dates
+¥ First day of class Ð January 12th
+¥ Drop deadline Ð January 16th at 5 pm
+¥ Withdrawal deadline Ð March 3rd
+¥ Mid-Term Exam Ð March 4th
+¥ Spring Break Ð March 16th to March 22nd
+¥ Final Exam Ð April 29th at 1:30 pm
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ mv Syllabus.txt class[K[K[K[Ksc3320_syllabus.txt
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ man wc
+[?1049h[?1h=WC(1)                                             User Commands                                            WC(1)[m
+[m
+[1mNAME[0m[m
+       wc - print newline, word, and byte counts for each file[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mwc[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+       [1mwc[0m [[4mOPTION[24m]... [4m--files0-from=F[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       Print  newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified.[m
+       With no FILE, or when FILE is -, read standard input.  A word is a non-zero-length sequence of characters[m
+       delimited  by  white  space.  The options below may be used to select which counts are printed, always in[m
+[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the following order: newline, word, character, byte, maximum line length.[m
+[7m Manual page wc(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[0m, [1m--bytes[0m[m
+[7m Manual page wc(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the byte counts[m
+[7m Manual page wc(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-m[0m, [1m--chars[0m[m
+[7m Manual page wc(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the character counts[m
+[7m Manual page wc(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m, [1m--lines[0m[m
+[7m Manual page wc(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the newline counts[m
+[7m Manual page wc(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--files0-from[0m=[4mF[24m[m
+[7m Manual page wc(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              read input from the files specified by NUL-terminated names in file F; If F is - then  read  names[m
+[7m Manual page wc(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              from standard input[m
+[7m Manual page wc(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-L[0m, [1m--max-line-length[0m[m
+[7m Manual page wc(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the length of the longest line[m
+[7m Manual page wc(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-w[0m, [1m--words[0m[m
+[7m Manual page wc(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the word counts[m
+[7m Manual page wc(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m display this help and exit[m
+[7m Manual page wc(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page wc(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page wc(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU  coreutils  online  help:  <http://www.gnu.org/software/coreutils/>  Report  wc  translation  bugs to[m
+[7m Manual page wc(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              from standard input[m
+[14;1H[K[7m Manual page wc(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              read input from the files specified by NUL-terminated names in file F; If F is - then  read  names[m
+[14;1H[K[7m Manual page wc(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--files0-from[0m=[4mF[24m[m
+[14;1H[K[7m Manual page wc(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              print the newline counts[m
+[14;1H[K[7m Manual page wc(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-l[0m, [1m--lines[0m[m
+[14;1H[K[7m Manual page wc(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              print the character counts[m
+[14;1H[K[7m Manual page wc(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-m[0m, [1m--chars[0m[m
+[14;1H[K[7m Manual page wc(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              print the byte counts[m
+[14;1H[K[7m Manual page wc(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-c[0m, [1m--bytes[0m[m
+[14;1H[K[7m Manual page wc(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the following order: newline, word, character, byte, maximum line length.[m
+[14;1H[K[7m Manual page wc(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       delimited  by  white  space.  The options below may be used to select which counts are printed, always in[m
+[14;1H[K[7m Manual page wc(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       With no FILE, or when FILE is -, read standard input.  A word is a non-zero-length sequence of characters[m
+[14;1H[K[7m Manual page wc(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Print  newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified.[m
+[14;1H[K[7m Manual page wc(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[14;1H[K[7m Manual page wc(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mwc[0m [[4mOPTION[24m]... [4m--files0-from=F[24m[m
+[14;1H[K[7m Manual page wc(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mwc[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[14;1H[K[7m Manual page wc(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[14;1H[K[7m Manual page wc(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       wc - print newline, word, and byte counts for each file[m
+[14;1H[K[7m Manual page wc(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[14;1H[K[7m Manual page wc(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[14;1H[K[7m Manual page wc(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMWC(1)                                             User Commands                                            WC(1)[m
+[14;1H[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page wc(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the following order: newline, word, character, byte, maximum line length.[m
+[7m Manual page wc(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-c[0m, [1m--bytes[0m[m
+[7m Manual page wc(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the byte counts[m
+[7m Manual page wc(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-m[0m, [1m--chars[0m[m
+[7m Manual page wc(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the character counts[m
+[7m Manual page wc(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m, [1m--lines[0m[m
+[7m Manual page wc(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the newline counts[m
+[7m Manual page wc(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--files0-from[0m=[4mF[24m[m
+[7m Manual page wc(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              read input from the files specified by NUL-terminated names in file F; If F is - then  read  names[m
+[7m Manual page wc(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              from standard input[m
+[7m Manual page wc(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-L[0m, [1m--max-line-length[0m[m
+[7m Manual page wc(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the length of the longest line[m
+[7m Manual page wc(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-w[0m, [1m--words[0m[m
+[7m Manual page wc(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the word counts[m
+[7m Manual page wc(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m display this help and exit[m
+[7m Manual page wc(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page wc(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page wc(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU  coreutils  online  help:  <http://www.gnu.org/software/coreutils/>  Report  wc  translation  bugs to[m
+[7m Manual page wc(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       <http://translationproject.org/team/>[m
+[7m Manual page wc(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTHOR[0m[m
+[7m Manual page wc(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Written by Paul Rubin and David MacKenzie.[m
+[7m Manual page wc(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOPYRIGHT[0m[m
+[7m Manual page wc(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Copyright  Â©  2013  Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3  or  later[m
+[7m Manual page wc(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       <http://gnu.org/licenses/gpl.html>.[m
+[7m Manual page wc(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This  is  free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent[m
+[7m Manual page wc(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       permitted by law.[m
+[7m Manual page wc(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSEE[0m [1mALSO[0m[m
+[7m Manual page wc(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The full documentation for [1mwc[0m is maintained as a Texinfo manual.  If the [1minfo[0m and [1mwc[0m programs  are  propâ€[m
+[7m Manual page wc(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       erly installed at your site, the command[m
+[7m Manual page wc(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1minfo[0m [1mcoreutils[0m [1m'wc[0m [1minvocation'[0m[m
+[7m Manual page wc(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       should give you access to the complete manual.[m
+[7m Manual page wc(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page wc(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KGNU coreutils 8.22                                November 2020                                            WC(1)[m
+[7m Manual page wc(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page wc(1) line 50/64 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ wc -w csc[K[K[Kcsc3320_syllabus.txt
+438 csc3320_syllabus.txt
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ nano hello_world.c
+[?1049h[1;14r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                        File: hello_world.c                                                        [12;52H[ New File ][13d^G(B[m Get Help[13;20H(B[0;7m^O(B[m WriteOut[13;39H(B[0;7m^R(B[m Read File	 (B[0;7m^Y(B[m Prev Page[77G(B[0;7m^K(B[m Cut Text[13;96H(B[0;7m^C(B[m Cur Pos[14d(B[0;7m^X(B[m Exit[14;20H(B[0;7m^J(B[m Justify[14;39H(B[0;7m^W(B[m Where Is[14;58H(B[0;7m^V(B[m Next Page[77G(B[0;7m^U(B[m UnCut Text[96G(B[0;7m^T(B[m To Spell[3d[1;106H(B[0;7mModified[3d(B[m#include <stdio.h>[4dint mai[12d[K[4;8Hn() {[5d[5;9Hprintf("Hellow   wr  World!");[6d[6;9Hreturn 0;[7d}[12d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                                       [13;1H Y(B[m Yes[K[14d(B[0;7m N(B[m No  [14;17H(B[0;7m^C(B[m Cancel[K[12;62H(B[0;7mFile Name to Write: hello_world.c                           [13d^G(B[m Get Help[13;29H(B[0;7mM-D(B[m DOS Format[13;57H(B[0;7mM-A(B[m Append[13;85H(B[0;7mM-B(B[m Backup File[14d(B[0;7m^C(B[m Cancel	            (B[0;7mM-M(B[m Mac Format[14;57H(B[0;7mM-P(B[m Prepend[12;34H[13d[39;49m(B[m[J[1;106H(B[0;7m        [12;49H(B[m[1K (B[0;7m[ Wrote 5 lines ](B[m[K[14;115H[14;1H[?1049l[?1l>]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ gcc hello_world.c -o hello_world
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ ./hellow[K_world
+Hello World!]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ chmod o+w hellow_[K[K_world.c
+]0;tananya1@gsuad.gsu.edu@snowball:~/csc3320[tananya1@gsuad.gsu.edu@snowball csc3320]$ exit
+exit
+
+Script done on Wed 28 Jan 2026 05:26:16 PM EST
