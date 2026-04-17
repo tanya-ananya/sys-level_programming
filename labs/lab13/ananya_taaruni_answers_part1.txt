@@ -1,0 +1,388 @@
+# Part One Answers
+
+## Task 1: grep — Searching Text 
+1. Display all rows where the department is Engineering
+grep "Engineering" employees.csv
+1001,Alice,Johnson,Engineering,Software Engineer,92000,2019-03-15,Columbus,OH,active
+1003,Carol,Smith,Engineering,Senior Engineer,115000,2017-11-20,Columbus,OH,active
+1005,Eva,Brown,Engineering,Junior Engineer,72000,2022-06-05,Columbus,OH,active
+1010,James,Jackson,Engineering,DevOps Engineer,98000,2019-10-03,Columbus,OH,active
+1013,Mia,Clark,Engineering,Software Engineer,93000,2020-11-15,Columbus,OH,active
+1015,Olivia,Robinson,Engineering,Tech Lead,130000,2015-07-14,Columbus,OH,active
+1018,Rachel,Allen,Engineering,QA Engineer,76000,2021-04-19,Columbus,OH,active
+1022,Victor,Wright,Engineering,Software Engineer,90000,2019-06-18,Columbus,OH,active
+1025,Yara,Baker,Engineering,Data Engineer,99000,2018-02-27,Columbus,OH,active
+2. Find all employees whose status is inactive.
+grep "inactive" employees.csv
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,OH,inactive
+1011,Karen,White,Marketing,SEO Specialist,61000,2022-03-28,Dayton,OH,inactive
+1019,Steve,Young,HR,HR Specialist,57000,2022-08-07,Dayton,OH,inactive
+3. Search for any employee whose last name starts with the letter 'S' (case-sensitive).
+grep -E "^[^,]*[^,]*,S[^,]*,' employees.csv
+1003,Carol,Smith,Engineering,Senior Engineer,115000,2017-11-20,Columbus,OH,active
+1023,Wendy,Scott,Marketing,Marketing Director,138000,2013-09-11,Columbus,OH,active
+4. Count how many employees work in the Marketing department. (Hint: use the -c flag.)
+grep -c "Marketing" employees.csv
+6
+5. Display all lines that do NOT contain the word 'Columbus'. (Hint: use the -v flag.)
+grep -v "Columbus employees.csv
+1002,Bob,Martinez,Marketing,Marketing Manager,78000,2020-07-01,Cleveland,OH,active
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,OH,inactive
+1006,Frank,Wilson,Marketing,Content Writer,54000,2021-09-14,Dayton,OH,active
+1007,Grace,Taylor,Finance,Financial Analyst,85000,2018-04-22,Cleveland,OH,active
+1009,Isabella,Thomas,Finance,Accountant,67000,2020-01-17,Toledo,OH,active
+1011,Karen,White,Marketing,SEO Specialist,61000,2022-03-28,Dayton,OH,inactive
+1012,Liam,Harris,Finance,Senior Accountant,88000,2017-05-09,Cleveland,OH,active
+1014,Noah,Lewis,HR,Recruiter,55000,2023-01-22,Cincinnati,OH,active
+1016,Paul,Walker,Marketing,Brand Manager,82000,2018-12-01,Cleveland,OH,active
+1019,Steve,Young,HR,HR Specialist,57000,2022-08-07,Dayton,OH,inactive
+1020,Tina,Hernandez,Marketing,Digital Marketer,63000,2020-05-25,Toledo,OH,active
+1021,Ursula,King,Finance,Accountant,66000,2021-10-30,Cleveland,OH,active
+1024,Xander,Green,HR,Training Specialist,60000,2022-11-03,Cincinnati,OH,active
+
+## Task 2: sed -- Stream Editor
+6. Replace every occurrence of 'active' with 'ACTIVE' in the file output (do not modify the file).
+sed "s/active/ACTIVE/" employees.csv
+1001,Alice,Johnson,Engineering,Software Engineer,92000,2019-03-15,Columbus,OH,ACTIVE
+1002,Bob,Martinez,Marketing,Marketing Manager,78000,2020-07-01,Cleveland,OH,ACTIVE
+1003,Carol,Smith,Engineering,Senior Engineer,115000,2017-11-20,Columbus,OH,ACTIVE
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,OH,inACTIVE
+1005,Eva,Brown,Engineering,Junior Engineer,72000,2022-06-05,Columbus,OH,ACTIVE
+1006,Frank,Wilson,Marketing,Content Writer,54000,2021-09-14,Dayton,OH,ACTIVE
+1007,Grace,Taylor,Finance,Financial Analyst,85000,2018-04-22,Cleveland,OH,ACTIVE
+1008,Henry,Anderson,HR,HR Manager,95000,2016-08-30,Columbus,OH,ACTIVE
+1009,Isabella,Thomas,Finance,Accountant,67000,2020-01-17,Toledo,OH,ACTIVE
+1010,James,Jackson,Engineering,DevOps Engineer,98000,2019-10-03,Columbus,OH,ACTIVE
+1011,Karen,White,Marketing,SEO Specialist,61000,2022-03-28,Dayton,OH,inACTIVE
+1012,Liam,Harris,Finance,Senior Accountant,88000,2017-05-09,Cleveland,OH,ACTIVE
+1013,Mia,Clark,Engineering,Software Engineer,93000,2020-11-15,Columbus,OH,ACTIVE
+1014,Noah,Lewis,HR,Recruiter,55000,2023-01-22,Cincinnati,OH,ACTIVE
+1015,Olivia,Robinson,Engineering,Tech Lead,130000,2015-07-14,Columbus,OH,ACTIVE
+1016,Paul,Walker,Marketing,Brand Manager,82000,2018-12-01,Cleveland,OH,ACTIVE
+1017,Quinn,Hall,Finance,Finance Director,145000,2014-03-05,Columbus,OH,ACTIVE
+1018,Rachel,Allen,Engineering,QA Engineer,76000,2021-04-19,Columbus,OH,ACTIVE
+1019,Steve,Young,HR,HR Specialist,57000,2022-08-07,Dayton,OH,inACTIVE
+1020,Tina,Hernandez,Marketing,Digital Marketer,63000,2020-05-25,Toledo,OH,ACTIVE
+1021,Ursula,King,Finance,Accountant,66000,2021-10-30,Cleveland,OH,ACTIVE
+1022,Victor,Wright,Engineering,Software Engineer,90000,2019-06-18,Columbus,OH,ACTIVE
+1023,Wendy,Scott,Marketing,Marketing Director,138000,2013-09-11,Columbus,OH,ACTIVE
+1024,Xander,Green,HR,Training Specialist,60000,2022-11-03,Cincinnati,OH,ACTIVE
+1025,Yara,Baker,Engineering,Data Engineer,99000,2018-02-27,Columbus,OH,ACTIVE
+7. Delete the first line (the header row) from the output.
+sed '1d' employees.csv
+1001,Alice,Johnson,Engineering,Software Engineer,92000,2019-03-15,Columbus,OH,active
+1002,Bob,Martinez,Marketing,Marketing Manager,78000,2020-07-01,Cleveland,OH,active
+1003,Carol,Smith,Engineering,Senior Engineer,115000,2017-11-20,Columbus,OH,active
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,OH,inactive
+1005,Eva,Brown,Engineering,Junior Engineer,72000,2022-06-05,Columbus,OH,active
+1006,Frank,Wilson,Marketing,Content Writer,54000,2021-09-14,Dayton,OH,active
+1007,Grace,Taylor,Finance,Financial Analyst,85000,2018-04-22,Cleveland,OH,active
+1008,Henry,Anderson,HR,HR Manager,95000,2016-08-30,Columbus,OH,active
+1009,Isabella,Thomas,Finance,Accountant,67000,2020-01-17,Toledo,OH,active
+1010,James,Jackson,Engineering,DevOps Engineer,98000,2019-10-03,Columbus,OH,active
+1011,Karen,White,Marketing,SEO Specialist,61000,2022-03-28,Dayton,OH,inactive
+1012,Liam,Harris,Finance,Senior Accountant,88000,2017-05-09,Cleveland,OH,active
+1013,Mia,Clark,Engineering,Software Engineer,93000,2020-11-15,Columbus,OH,active
+1014,Noah,Lewis,HR,Recruiter,55000,2023-01-22,Cincinnati,OH,active
+1015,Olivia,Robinson,Engineering,Tech Lead,130000,2015-07-14,Columbus,OH,active
+1016,Paul,Walker,Marketing,Brand Manager,82000,2018-12-01,Cleveland,OH,active
+1017,Quinn,Hall,Finance,Finance Director,145000,2014-03-05,Columbus,OH,active
+1018,Rachel,Allen,Engineering,QA Engineer,76000,2021-04-19,Columbus,OH,active
+1019,Steve,Young,HR,HR Specialist,57000,2022-08-07,Dayton,OH,inactive
+1020,Tina,Hernandez,Marketing,Digital Marketer,63000,2020-05-25,Toledo,OH,active
+1021,Ursula,King,Finance,Accountant,66000,2021-10-30,Cleveland,OH,active
+1022,Victor,Wright,Engineering,Software Engineer,90000,2019-06-18,Columbus,OH,active
+1023,Wendy,Scott,Marketing,Marketing Director,138000,2013-09-11,Columbus,OH,active
+1024,Xander,Green,HR,Training Specialist,60000,2022-11-03,Cincinnati,OH,active
+1025,Yara,Baker,Engineering,Data Engineer,99000,2018-02-27,Columbus,OH,active
+8. Print only lines 5 through 10 of the file.
+sed -n '5,10p' employees.csv
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,OH,inactive
+1005,Eva,Brown,Engineering,Junior Engineer,72000,2022-06-05,Columbus,OH,active
+1006,Frank,Wilson,Marketing,Content Writer,54000,2021-09-14,Dayton,OH,active
+1007,Grace,Taylor,Finance,Financial Analyst,85000,2018-04-22,Cleveland,OH,active
+1008,Henry,Anderson,HR,HR Manager,95000,2016-08-30,Columbus,OH,active
+1009,Isabella,Thomas,Finance,Accountant,67000,2020-01-17,Toledo,OH,active
+9. Replace the state abbreviation 'OH' with 'Ohio' in the output.
+sed "s/\bOH\b/Ohio/g" employees.csv
+employee_id,first_name,last_name,department,job_title,salary,hire_date,city,state,status
+1001,Alice,Johnson,Engineering,Software Engineer,92000,2019-03-15,Columbus,Ohio,active
+1002,Bob,Martinez,Marketing,Marketing Manager,78000,2020-07-01,Cleveland,Ohio,active
+1003,Carol,Smith,Engineering,Senior Engineer,115000,2017-11-20,Columbus,Ohio,active
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,Ohio,inactive
+1005,Eva,Brown,Engineering,Junior Engineer,72000,2022-06-05,Columbus,Ohio,active
+1006,Frank,Wilson,Marketing,Content Writer,54000,2021-09-14,Dayton,Ohio,active
+1007,Grace,Taylor,Finance,Financial Analyst,85000,2018-04-22,Cleveland,Ohio,active
+1008,Henry,Anderson,HR,HR Manager,95000,2016-08-30,Columbus,Ohio,active
+1009,Isabella,Thomas,Finance,Accountant,67000,2020-01-17,Toledo,Ohio,active
+1010,James,Jackson,Engineering,DevOps Engineer,98000,2019-10-03,Columbus,Ohio,active
+1011,Karen,White,Marketing,SEO Specialist,61000,2022-03-28,Dayton,Ohio,inactive
+1012,Liam,Harris,Finance,Senior Accountant,88000,2017-05-09,Cleveland,Ohio,active
+1013,Mia,Clark,Engineering,Software Engineer,93000,2020-11-15,Columbus,Ohio,active
+1014,Noah,Lewis,HR,Recruiter,55000,2023-01-22,Cincinnati,Ohio,active
+1015,Olivia,Robinson,Engineering,Tech Lead,130000,2015-07-14,Columbus,Ohio,active
+1016,Paul,Walker,Marketing,Brand Manager,82000,2018-12-01,Cleveland,Ohio,active
+1017,Quinn,Hall,Finance,Finance Director,145000,2014-03-05,Columbus,Ohio,active
+1018,Rachel,Allen,Engineering,QA Engineer,76000,2021-04-19,Columbus,Ohio,active
+1019,Steve,Young,HR,HR Specialist,57000,2022-08-07,Dayton,Ohio,inactive
+1020,Tina,Hernandez,Marketing,Digital Marketer,63000,2020-05-25,Toledo,Ohio,active
+1021,Ursula,King,Finance,Accountant,66000,2021-10-30,Cleveland,Ohio,active
+1022,Victor,Wright,Engineering,Software Engineer,90000,2019-06-18,Columbus,Ohio,active
+1023,Wendy,Scott,Marketing,Marketing Director,138000,2013-09-11,Columbus,Ohio,active
+1024,Xander,Green,HR,Training Specialist,60000,2022-11-03,Cincinnati,Ohio,active
+1025,Yara,Baker,Engineering,Data Engineer,99000,2018-02-27,Columbus,Ohio,active
+10. Remove all commas from the output (so the file appears as space-separated).
+sed 's/,/ /" employees.csv
+employee_id first_name last_name department job_title salary hire_date city state status
+1001 Alice Johnson Engineering Software Engineer 92000 2019-03-15 Columbus OH active
+1002 Bob Martinez Marketing Marketing Manager 78000 2020-07-01 Cleveland OH active
+1003 Carol Smith Engineering Senior Engineer 115000 2017-11-20 Columbus OH active
+1004 David Lee HR HR Specialist 58000 2021-02-10 Cincinnati OH inactive
+1005 Eva Brown Engineering Junior Engineer 72000 2022-06-05 Columbus OH active
+1006 Frank Wilson Marketing Content Writer 54000 2021-09-14 Dayton OH active
+1007 Grace Taylor Finance Financial Analyst 85000 2018-04-22 Cleveland OH active
+1008 Henry Anderson HR HR Manager 95000 2016-08-30 Columbus OH active
+1009 Isabella Thomas Finance Accountant 67000 2020-01-17 Toledo OH active
+1010 James Jackson Engineering DevOps Engineer 98000 2019-10-03 Columbus OH active
+1011 Karen White Marketing SEO Specialist 61000 2022-03-28 Dayton OH inactive
+1012 Liam Harris Finance Senior Accountant 88000 2017-05-09 Cleveland OH active
+1013 Mia Clark Engineering Software Engineer 93000 2020-11-15 Columbus OH active
+1014 Noah Lewis HR Recruiter 55000 2023-01-22 Cincinnati OH active
+1015 Olivia Robinson Engineering Tech Lead 130000 2015-07-14 Columbus OH active
+1016 Paul Walker Marketing Brand Manager 82000 2018-12-01 Cleveland OH active
+1017 Quinn Hall Finance Finance Director 145000 2014-03-05 Columbus OH active
+1018 Rachel Allen Engineering QA Engineer 76000 2021-04-19 Columbus OH active
+1019 Steve Young HR HR Specialist 57000 2022-08-07 Dayton OH inactive
+1020 Tina Hernandez Marketing Digital Marketer 63000 2020-05-25 Toledo OH active
+1021 Ursula King Finance Accountant 66000 2021-10-30 Cleveland OH active
+1022 Victor Wright Engineering Software Engineer 90000 2019-06-18 Columbus OH active
+1023 Wendy Scott Marketing Marketing Director 138000 2013-09-11 Columbus OH active
+1024 Xander Green HR Training Specialist 60000 2022-11-03 Cincinnati OH active
+1025 Yara Baker Engineering Data Engineer 99000 2018-02-27 Columbus OH active
+
+## Task 3: awk -- Pattern Processing
+11. Print only the first_name and last_name columns for every employee.
+awk -F',' 'NR>1 {print $2, $3}'
+Alice	Johnson
+Bob	Martinez
+Carol	Smith
+David	Lee
+Eva	Brown
+Frank	Wilson
+Grace	Taylor
+Henry	Anderson
+Isabella	Thomas
+James	Jackson
+Karen	White
+Liam	Harris
+Mia	Clark
+Noah	Lewis
+Olivia	Robinson
+Paul	Walker
+Quinn	Hall
+Rachel	Allen
+Steve	Young
+Tina	Hernandez
+Ursula	King
+Victor	Wright
+Wendy	Scott
+Xander	Green
+Yara	Baker
+12. Print the full name and salary of every employee who earns more than $90,000.
+awk -F',' 'NR>1 && $6 > 90000 {print $2, $3, " ", "$"$6}'
+Alice Johnson  $92000
+Carol Smith  $115000
+Henry Anderson  $95000
+James Jackson  $98000
+Mia Clark  $93000
+Olivia Robinson  $130000
+Quinn Hall  $145000
+Wendy Scott  $138000
+Yara Baker  $99000
+13. Calculate and print the average salary of all employees.
+awk -F',' 'NR>1 {sum += $6; count++} END {if(count) printf "%.2f\n", sum/count}' employees.csv
+82280.00
+14. Print the department and job_title of all employees in the Finance department.
+awk -F',' 'NR>1 && $4 == "Finance" {print $4, ",", $5}' employees.csv
+Finance , Financial Analyst
+Finance , Accountant
+Finance , Senior Accountant
+Finance , Finance Director
+Finance , Accountant
+15. Print a count of employees per department. (Hint: use an associative array.)
+awk -F',' 'NR>1 {dept[$4]++} END {for (d in dept) print dept[d], d}' employees.csv
+
+## Task 4: sort & uniq — Sorting and Deduplication
+16. Sort the file by last name (column 3) alphabetically.
+sort -t', -k3,3 employees.csv
+17. Sort employees by salary (column 6) in descending numeric order.
+sort -t',' -k6,6nr employees.csv
+1017,Quinn,Hall,Finance,Finance Director,145000,2014-03-05,Columbus,OH,active
+1023,Wendy,Scott,Marketing,Marketing Director,138000,2013-09-11,Columbus,OH,active
+1015,Olivia,Robinson,Engineering,Tech Lead,130000,2015-07-14,Columbus,OH,active
+1003,Carol,Smith,Engineering,Senior Engineer,115000,2017-11-20,Columbus,OH,active
+1025,Yara,Baker,Engineering,Data Engineer,99000,2018-02-27,Columbus,OH,active
+1010,James,Jackson,Engineering,DevOps Engineer,98000,2019-10-03,Columbus,OH,active
+1008,Henry,Anderson,HR,HR Manager,95000,2016-08-30,Columbus,OH,active
+1013,Mia,Clark,Engineering,Software Engineer,93000,2020-11-15,Columbus,OH,active
+1001,Alice,Johnson,Engineering,Software Engineer,92000,2019-03-15,Columbus,OH,active
+1022,Victor,Wright,Engineering,Software Engineer,90000,2019-06-18,Columbus,OH,active
+1012,Liam,Harris,Finance,Senior Accountant,88000,2017-05-09,Cleveland,OH,active
+1007,Grace,Taylor,Finance,Financial Analyst,85000,2018-04-22,Cleveland,OH,active
+1016,Paul,Walker,Marketing,Brand Manager,82000,2018-12-01,Cleveland,OH,active
+1002,Bob,Martinez,Marketing,Marketing Manager,78000,2020-07-01,Cleveland,OH,active
+1018,Rachel,Allen,Engineering,QA Engineer,76000,2021-04-19,Columbus,OH,active
+1005,Eva,Brown,Engineering,Junior Engineer,72000,2022-06-05,Columbus,OH,active
+1009,Isabella,Thomas,Finance,Accountant,67000,2020-01-17,Toledo,OH,active
+1021,Ursula,King,Finance,Accountant,66000,2021-10-30,Cleveland,OH,active
+1020,Tina,Hernandez,Marketing,Digital Marketer,63000,2020-05-25,Toledo,OH,active
+1011,Karen,White,Marketing,SEO Specialist,61000,2022-03-28,Dayton,OH,inactive
+1024,Xander,Green,HR,Training Specialist,60000,2022-11-03,Cincinnati,OH,active
+1004,David,Lee,HR,HR Specialist,58000,2021-02-10,Cincinnati,OH,inactive
+1019,Steve,Young,HR,HR Specialist,57000,2022-08-07,Dayton,OH,inactive
+1014,Noah,Lewis,HR,Recruiter,55000,2023-01-22,Cincinnati,OH,active
+1006,Frank,Wilson,Marketing,Content Writer,54000,2021-09-14,Dayton,OH,active
+18. List all unique departments that appear in the file (no duplicates, no header).
+tail -n +2 employees.csv | cut -d',' -f4 | sort | uniq
+Engineering
+Finance
+HR
+Marketing
+19. List all unique cities and how many employees are located in each city, sorted by count descending.
+tail -n +2 employees.csv | cut -d',' -f8 | sort | uniq -c | sort -NR
+12 Columbus
+6 Cleveland
+4 Dayton
+3 Cincinnati
+2 Toledo
+
+## Task 5: cut — Extracting Columns 
+20. Extract only the employee_id and department columns from the file.
+cut -d',' -f1,4 employees.csv
+employee_id	department
+1001	Engineering
+1002	Marketing
+1003	Engineering
+1004	HR
+1005	Engineering
+1006	Marketing
+1007	Finance
+1008	HR
+1009	Finance
+1010	Engineering
+1011	Marketing
+1012	Finance
+1013	Engineering
+1014	HR
+1015	Engineering
+1016	Marketing
+1017	Finance
+1018	Engineering
+1019	HR
+1020	Marketing
+1021	Finance
+1022	Engineering
+1023	Marketing
+1024	HR
+1025	Engineering
+21. Extract the hire_date column, then use cut again to isolate just the year portion (characters 1-4).
+cut -d',' -f7 employees.csv | cut -c1-4
+hire
+2019
+2020
+2017
+2021
+2022
+2021
+2018
+2016
+2020
+2019
+2022
+2017
+2020
+2023
+2015
+2018
+2014
+2021
+2022
+2020
+2021
+2019
+2013
+2022
+2018
+22. Extract columns first_name, last_name, and salary, and display the result sorted by salary descending. (Hint: pipe to sort.)
+cut -d',' -f2,3,6 employees.csv | sort -t',' -k3,3nr
+Quinn,Hall,145000
+Wendy,Scott,138000
+Olivia,Robinson,130000
+Carol,Smith,115000
+Yara,Baker,99000
+James,Jackson,98000
+Henry,Anderson,95000
+Mia,Clark,93000
+Alice,Johnson,92000
+Victor,Wright,90000
+Liam,Harris,88000
+Grace,Taylor,85000
+Paul,Walker,82000
+Bob,Martinez,78000
+Rachel,Allen,76000
+Eva,Brown,72000
+Isabella,Thomas,67000
+Ursula,King,66000
+Tina,Hernandez,63000
+Karen,White,61000
+Xander,Green,60000
+David,Lee,58000
+Steve,Young,57000
+Noah,Lewis,55000
+Frank,Wilson,54000
+23. Show just the first 10 characters of every line in the file.
+employee_i
+1001,Alice
+1002,Bob,
+1003,Carol
+1004,David
+1005,Eva,B
+1006,Frank
+1007,Grace
+1008,Henry
+1009,Isabe
+1010,James
+1011,Karen
+1012,Liam
+1013,Mia,
+1014,Noah
+1015,Olivi
+1016,Paul
+1017,Quinn
+1018,Rache
+1019,Steve
+1020,Tina,
+1021,Ursul
+1022,Victo
+1023,Wendy
+1024,Xande
+1025,Yara,
+
+Task 6: Command Pipelines (Bonus) 
+24. List all unique job titles held by Engineering department employees, sorted alphabetically.
+tail -n +2 employees.csv | grep "Engineering" | cut -d',' -f5 | sort | uniq
+Data Engineer
+DevOps Engineer
+Junior Engineer
+QA Engineer
+Senior Engineer
+Software Engineer
+Tech Lead
+25. Find the top 3 highest-paid employees and display their full name and salary
+tail -n +2 employees.csv | sort -t',' -k6,6 -rn | head -3 | awk -F',' '{print $2, $3, "-", "$"$6}
+
+### Sources used:
+- Geeks for Geeks
+- Earthly.dev
+- IBM
+- Medium
